@@ -1,8 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import FacebookLogin from 'react-facebook-login';
-import { Container, Row, Col, Card, CardImg, CardText, CardBody,
-    CardTitle, CardSubtitle } from 'reactstrap';
+import {CardImg, CardText, CardBody, CardTitle, CardSubtitle } from 'reactstrap';
     
 class Facebook extends React.Component {
     constructor(props) {
@@ -51,7 +49,7 @@ class Facebook extends React.Component {
             fbContent = ( <div>
             
                             <FacebookLogin
-                                appId= "562896174110980"
+                                appId= {this.props.clientId}
                                 autoLoad={true}
                                 fields="name,email,picture"
                                 onClick={this.componentClicked}
@@ -60,7 +58,6 @@ class Facebook extends React.Component {
         }
         return (
             <div>
-                ===> {process.env.FBAPPID}
                 {fbContent}
                 
             </div>

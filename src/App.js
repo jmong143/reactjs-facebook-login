@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
-import { Alert, Button, Container, Row, Col, Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle } from 'reactstrap';
+import { Container, Row, Col} from 'reactstrap';
 import Facebook from './components/Facebook';
 
 class App extends Component {
   render() {
     return (
-      
       <div>
         <br/>
         <Container>
         <Row>
           <Col>
-            <Facebook />
+            {/* put your fb clientid inside <Facebook/> component */}
+            <Facebook clientId = ""/>
           </Col>
         </Row>
       </Container>
